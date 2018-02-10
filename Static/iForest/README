@@ -1,0 +1,13 @@
+The code is based on Scikit-Learn iForest code.
+
+To run iForest:
+	python iForest.py <in_file> <out_file> <num_runs> <number_of_trees>
+	
+	
+An example:
+	python iForest.py ../../Data/sample_data.txt ../../Sample_Output/IF_sample_data 10 100
+	
+will produce the following files:
+	../../Sample_Output/IF_sample_data - each line contains information for the run - runId <tab> AUC <tab> AP
+	and last line contains MeanAUC, StdDev AUC, Mean AP, StdDev AP
+	../../Sample_Output/IF_sample_data.pkl - contains the scores of the data 

@@ -1,0 +1,17 @@
+The code is based on Shubhmoy Das' code available here:
+https://github.com/shubhomoydas/pyaad/tree/master/pyalad
+
+Depending on the dataset, HSTrees code can take some time.
+To check the code in a quick manner - we will recommend doing it only for 1 run, 
+or doing multiple runs with less number of trees, say 10.
+
+To run HS-Trees:
+	python HSTree_runner.py <in_file> <out_file> <num_runs> <number_of_trees> <max_depth>
+	
+	
+An example:
+	python HSTree_runner.py ../../Data/sample_data.txt ../../Sample_Output/HST_sample_data 1 100 15
+	
+will produce the following files:
+	../../Sample_Output/HST_sample_data - contains information MeanAUC, StdDev AUC, Mean AP, StdDev AP
+	../../Sample_Output/HST_sample_data.pkl - contains the scores of the data 

@@ -1,0 +1,15 @@
+The code is based on LODA code, as implemented by Shubhomoy Das and available here:
+https://github.com/shubhomoydas/pyaad/tree/master/pyalad
+
+To run RSHash:
+	python loda_runner.py <in_file> <out_file> <num_runs>
+	
+An example:
+	python loda_runner.py ../../Data/sample_data.txt ../../Sample_Output/LODA_sample_data 10
+	
+will produce the following files:
+	../../Sample_Output/LODA_sample_data - each line contains information for the run - runId <tab> AUC <tab> AP
+	and last line contains MeanAUC, StdDev AUC, Mean AP, StdDev AP
+	../../Sample_Output/LODA_sample_data.pkl - contains the scores as computed by the method for each run
+	
+NOTE:To ensure comparability across models, we set number of projections to 100, explicitly in Line283 of loda.py 

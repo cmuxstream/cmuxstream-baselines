@@ -1,0 +1,16 @@
+The code is based on RS-Hash paper: http://saketsathe.net/downloads/rshash.pdf
+We implement only the exact hash version, and do not have support for count-min sketch variant.
+Therefore the number of hash functions is just 1 i.e. a dictionary. 
+For each component, a dictionary is maintained.
+
+To run RSHash:
+	python RSHash.py <in_file> <out_file> <num_runs> <number_of_components> <sampling_points>
+	
+	
+An example:
+	python RSHash.py ../../Data/sample_data.txt ../../Sample_Output/RSH_sample_data 10 100 1000
+	
+will produce the following files:
+	../../Sample_Output/RSH_sample_data - each line contains information for the run - runId <tab> AUC <tab> AP
+	and last line contains MeanAUC, StdDev AUC, Mean AP, StdDev AP
+	../../Sample_Output/RSH_sample_data.pkl - contains the scores as computed by the method for each run 

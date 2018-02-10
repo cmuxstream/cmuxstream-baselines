@@ -1,0 +1,12 @@
+The code is based on RS-Hash paper: http://saketsathe.net/downloads/rshash.pdf
+
+For streaming setting, we use the exact hash variant. Therefore the number of hash functions is just 1 i.e. a dictionary. 
+For each component, a dictionary is maintained.
+The number of sampling points is set to 1000
+
+To run RSHash:
+	python sparse_stream_RSHash.py <in_file> <out_file> <decay>
+	
+An example:
+	python sparse_stream_RSHash.py ../../Data/http10K.csv ../../Sample_Output/Stream_RSH_http10k.txt 0.015
+	

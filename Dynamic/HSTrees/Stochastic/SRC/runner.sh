@@ -1,0 +1,5 @@
+va -Xmx4G stochastic/Main "2001" "0" "/Users/hemanklamba/Documents/Experiments/HighDim_Outliers/Streaming_HighDim_Case/HttpSmtpContinuous/HSTrees4/HST_Run1_20Per_" "15" "20" "20" "100" "/Users/hemanklamba/Documents/Experiments/HighDim_Outliers/Streaming_HighDim_Case/Data/" "-1000" "1"
+echo "Run2..."
+java -Xmx2G stochastic/Main "2003" "0" "/Users/hemanklamba/Documents/Experiments/HighDim_Outliers/Streaming_HighDim_Case/HttpSmtpContinuous/HSTrees4/HST_Run2_20Per_" "15" "20" "20" "100" "/Users/hemanklamba/Documents/Experiments/HighDim_Outliers/Streaming_HighDim_Case/Data/" "-1000" "1"
+echo "Run3..."
+java -Xmx2G stochastic/Main "2003" "0" "/Users/hemanklamba/Documents/Experiments/HighDim_Outliers/Streaming_HighDim_Case/HttpSmtpContinuous/HSTrees4/HST_Run3_20Per_" "15" "20" "20" "100" "/Users/hemanklamba/Documents/Experiments/HighDim_Outliers/Streaming_HighDim_Case/Data/" "-1000" "1"

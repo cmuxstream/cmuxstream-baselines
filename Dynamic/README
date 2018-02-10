@@ -1,0 +1,21 @@
+For dynamic datasets, we compare our performance with the following algorithms:
+
+1. HS-Trees: Swee Chuan Tan, Kai Ming Ting, and Fei Tony Liu. 2011. Fast Anomaly Detection for Streaming Data. IJCAI. 1511–1516.
+2. RSHash: Saket Sathe and Charu C. Aggarwal. 2016. Subspace Outlier Detection in Linear Time with Randomized Hashing. ICDM. 459–468.
+3. LODA: Toma ́s Pevny ́. 2016. Loda: Lightweight on-line detector of anomalies. Machine Learning 102, 2 (2016), 275–304.
+
+Input File format:
+
+HS-Trees has a parameterNdata type of file format.
+Check sample file in DATA directory for the format.
+Each line under ***DATA*** has the following format:
+Label, Feature1, Feature2, Feature3, Feature4... Featured
+
+Feature 1-- Feature d: features for the input data
+Label: 1 if outlier, 0 if normal
+
+You can run all the set of baselines simultaneously by running runner_static.sh
+
+sh runner_dynamic.sh <in_file> <out_dir>
+
+All the parameters that are configurable for each of the baselines are set to default setting.

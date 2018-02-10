@@ -1,0 +1,19 @@
+For static datasets, we compare our performance with the following algorithms:
+
+1. iForest: Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou. 2008. Isolation Forest. ICDM. 413–422.
+2. HS-Trees: Swee Chuan Tan, Kai Ming Ting, and Fei Tony Liu. 2011. Fast Anomaly Detection for Streaming Data. IJCAI. 1511–1516.
+3. RSHash: Saket Sathe and Charu C. Aggarwal. 2016. Subspace Outlier Detection in Linear Time with Randomized Hashing. ICDM. 459–468.
+4. LODA: Toma ́s Pevny ́. 2016. Loda: Lightweight on-line detector of anomalies. Machine Learning 102, 2 (2016), 275–304.
+
+Input File format:
+
+<Feature 1>,<Feature 2>,<Feature 3>,<Feature 4>....<Feature d><Label>
+
+Feature 1-- Feature d: features for the input data
+Label: 1 if outlier, 0 if normal
+
+You can run all the set of baselines simultaneously by running runner_static.sh
+
+sh runner_static.sh <in_file> <out_dir> <num_runs> <num_components>
+
+All the other parameters that are configurable for each of the baselines are set to default settings:

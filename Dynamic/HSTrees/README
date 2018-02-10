@@ -1,0 +1,39 @@
+HSTree Code
+
+This code is as shared by James Tan, the original author, on their website:https://sites.google.com/site/analyticsofthings/recent-work-fast-anomaly-detection-for-streaming-data 
+There are certain changes that we made to adapt the original one-class classification method 
+for the unsupervised setting.
+
+1. We use the all the samples in the window-size for training trees, and not limit 
+ourselves to only nominal points.
+
+
+To compile the code:
+cd to Stochastic/SRC
+javac -cp sizeofag.jar stochastic/*.java
+
+
+To run the code:
+cd to Stochastic/SRC
+
+java stochastic/Main <DS_ID> <Run_Number> <Result_Dir> <Max_Depth> <Max_Expansion> <Min_Leaf_Count> <Num_Trees> <Data_Dir> <Learning_Mode> 1  
+java stochastic/Main "4003" "0" "../../../../Sample_Output/HSStream_" "15" "20" "20" "100" "../../../../Data/" "-1000" "1" 
+
+The output file is stored as:
+HSStream_AnormalyScores_<RunId>.csv
+
+DS_ID - Specify the DS-ID. This is specified in Main.java, and further corresponding changes in Parameters.java and Datum.java
+Run_Number - If you are running just once, then this is 0. If running multiple times, this need to change correspondingly
+Max_Depth - Maximum depth of HS-Trees. Should be set to 15 as default.
+Max_Expansion - Maximum expansion level. Default = 20
+Min_Leaf_Count - Minimum leaf count. Default = 20
+Num_Trees - Number of components. Default = 100
+Result_Dir - Directory where the results should be stored.
+Learning_Mode - Whether to retrain the model after every window (-1000) or not (1000).
+
+The window size is specified in Main.java: Line 64.
+
+For high n, high d settings, where the system memory requirements might get full
+- we recommend changing reading of each entry in Datum.java to a sparse way of reading
+- we also recommend changing code to read one window at a time, contrary to the current code
+- we recommend sampling 256 points for each component from the window size instead of using all the samples in the entire window

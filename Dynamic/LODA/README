@@ -1,0 +1,22 @@
+LODA Code as given on Tomas Pevny's website.
+
+There are two versions of LODA available in this directory:
+
+streamLoda_mod.m
+
+Requirements:
+You need to download the prtools toolbox to be able to run this code.
+
+streamLoda_dd.m - Works well for smaller datasets; and is in original format as given by Tomas Pevny.
+To run streamLoda_mod.m:
+	[yHat] = stream_loda_mod(X,y,winSize,sparsity,histType,maxBins,op_file)
+
+PARAMETERS:
+	1. X: The input data.
+	2. y: Label
+	3. winSize: Window Size (set to 256)
+	4. sparsity: 'sparse'/'dense'
+	5. histType: 'continuous'/'two-window'
+	6. maxBins: 500
+	7. op_file: Location of the output file, where the results will be stored.
+	
