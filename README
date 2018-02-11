@@ -1,0 +1,10 @@
+In this repository, we share the code for baselines and our proposed method xStream. We also provide datasets used for evaluation.
+
+To run the static baselines:
+cd Static
+sh runner_static.sh
+
+To run the dynamic baselines:
+cd Dynamic
+sh runner_dynamic.sh
+
